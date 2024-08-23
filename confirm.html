@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="confirm.js" defer></script>
+</head>
+<body>
+    <div class="otp-container">
+        <p>Dear <span id="firstName">First NAme</span>
+            <br>
+        Thank you for your inquiry. A 4 digit verification number has been sent to your email: <span id="userEmail">Email</span>, please enter it in the following box and submit for confirmation:</p>
+
+        <div class="otp-box">
+            <div class="otp">
+                <input type="text" placeholder="Enter OTP" id="userOTP">
+            </div>
+           
+            <div class="validate-btn">
+                <button id="validateBtn">Validate</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

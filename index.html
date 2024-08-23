@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form id="loan-form" action="#">
+
+             <div class="text-field">
+                <label for="">Full Name</label>
+                <div class="text-box">
+                    <input type="text" placeholder="Enter your name" id="name">
+                    <span class="error" id="nameError"></span>
+                </div>
+            </div>
+
+            <div class="text-field">
+                <label for="">Email</label>
+                <div class="text-box">
+                    <input type="text" placeholder="Enter email here" id="email">
+                    <span class="error" id="emailError"></span>
+                </div>
+            </div>
+
+            <div class="text-field">
+                <label for="">PAN</label>
+                <div class="text-box">
+                    <input type="text" placeholder="Enter PAN" id="pan">
+                    <span class="error" id="panError"></span>
+                </div>
+            </div>
+
+            <div class="text-field">
+                <label for="">Loan Amount</label>
+               <div class="text-box">
+                <input type="text" placeholder="Enter loan amount" id="loan_amount">
+                <span class="error" id="loanAmountError"></span>
+                <div class="emiBox">
+                    <span>Estimated EMI:</span><span id="emiDisplay" class="emi-display"></span>
+                </div>
+               </div>
+            </div>
+
+           <div class="btn">
+            <input type="submit" value="Submit">
+           </div>
+        </form>
+    </div>
+</body>
+</html>
