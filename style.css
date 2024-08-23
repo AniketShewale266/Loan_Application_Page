@@ -75,7 +75,7 @@ body{
     /* border: 2px solid red; */
     /* display: flex; */
     width: 275px;
-    height: 60px;
+    height: 70px;
 }
 .error{
     color: var(--Light_red);
