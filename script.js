@@ -13,6 +13,10 @@ const emailError = document.getElementById("emailError");
 const panError = document.getElementById("panError");
 const loanAmountError = document.getElementById("loanAmountError");
 
+// Select EMI Month
+const emiMonthSelect = document.getElementById('emiMonth');
+
+
 // function for each input validation
 const validationConfig = {
     fullName: [
@@ -33,7 +37,7 @@ const validationConfig = {
     ],
 };
 
-// function for cheching validation
+// function for checking validation
 const validate = (formData) => {
     const errorData = {};
     Object.entries(formData).forEach(([key, value]) => {
@@ -54,23 +58,36 @@ const validate = (formData) => {
 };
 
 // EMI Calculation
-const calculateEMI = (loanAmount) => {
+const calculateEMI = (loanAmount, tenureMonths) => {
     const principal = parseFloat(loanAmount);
     const annualInterestRate = 8.5 / 100;
     const monthlyInterestRate = annualInterestRate / 12;
-    const tenureMonths = 15 * 12;
 
-    // formula for emi calculation
+    // Formula for EMI calculation
     const emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenureMonths)) /
                 (Math.pow(1 + monthlyInterestRate, tenureMonths) - 1);
 
     return emi.toFixed(2);
 };
 
+// EMI calculation on tenure change
+emiMonthSelect.addEventListener('change', () => {
+    const amount = loanAmount.value;
+    const tenure = parseInt(emiMonthSelect.value);
+    if (amount.match(/^\d{1,9}$/)) {
+        const emi = calculateEMI(amount, tenure); 
+        emiDisplay.textContent = `₹${emi}`;
+    } else {
+        emiDisplay.textContent = "";
+    }
+});
+
+// EMI calculation on loan amount input
 loanAmount.addEventListener('input', () => {
     const amount = loanAmount.value;
+    const tenure = parseInt(emiMonthSelect.value);
     if (amount.match(/^\d{1,9}$/)) {
-        const emi = calculateEMI(amount);
+        const emi = calculateEMI(amount, tenure);
         emiDisplay.textContent = `₹${emi}`;
     } else {
         emiDisplay.textContent = "";
@@ -83,15 +100,15 @@ fullName.addEventListener('input',()=>{
 })
 
 email.addEventListener('input',()=>{
-    emailError.style.color = ''
+    emailError.textContent = "";
 })
 
 pan.addEventListener('input',()=>{
-    panError.style.color = ''
+    panError.textContent = "";
 })
 
 loanAmount.addEventListener('input',()=>{
-    loanAmountError.style.color = ''
+    loanAmountError.textContent = "";
 })
 
 

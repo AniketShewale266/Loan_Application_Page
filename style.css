@@ -46,6 +46,12 @@ body{
 
 }
 
+.emi-select{
+    outline: none;
+    border: 1px solid var(--Light_grey);
+    padding: 4px;
+}
+
 .text-box input{
     width: 100%;
     font-weight: 500;
@@ -110,9 +116,9 @@ body{
 .validate-btn button{
     background-color: var(--Purple);
     color: var(--Off_white);
-    padding: 18px 30px;
+    padding: 14px 30px;
     border: none;
-    font-size: 14px;
+    font-size: 17px;
     border-radius: 8px;
     cursor: pointer;
 }

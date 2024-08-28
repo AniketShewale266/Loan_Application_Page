@@ -28,7 +28,8 @@ validateBtn.addEventListener('click',()=>{
     if (userenteredOTP == randomOTP) {
         otpBox.innerHTML = '<p>Validation Successful!</p>';
         setTimeout(() => {
-            window.location.href = 'https://pixel6.co';
+            // window.location.href = 'https://pixel6.co';
+            window.location.href = `address.html?name=${userName}`;
         }, 1000);  
     } else {
         if (attempts >= 3) {
