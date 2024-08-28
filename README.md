@@ -17,6 +17,8 @@
 ## Validate OTP
 ![image](https://github.com/user-attachments/assets/7041670f-a13b-4199-b897-f662c5ff129d)
 
+## Address Details Page
+![image](https://github.com/user-attachments/assets/a8378be4-3418-4f77-ad65-70ab33a4560a)
 
 Link: https://loanapplicationpage.netlify.app/
 
