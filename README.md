@@ -1,12 +1,10 @@
 # Loan_Application_Page
 
 ## Home Page
-![image](https://github.com/user-attachments/assets/e6e2ac3a-bbdb-4bd2-9ad8-ad4504ceba06)
-
+![image](https://github.com/user-attachments/assets/6981c083-fe00-4276-b5c3-ece4b4e80187)
 
 ## Form Validation
 ![image](https://github.com/user-attachments/assets/8e69e189-a3a0-4b9f-9ef9-4665e53027d6)
-
 
 ## After Submitting Details
 ![image](https://github.com/user-attachments/assets/4b11886d-2fd2-4e9b-b29e-cd8cb126b4bc)
